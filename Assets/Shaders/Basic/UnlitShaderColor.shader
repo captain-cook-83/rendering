@@ -57,5 +57,20 @@ Shader "Cc83/Unlit/UnlitShaderColor"
             }
             ENDHLSL
         }
+
+        Pass
+        {
+            Name "DepthOnly"
+            Tags { "LightMode"="DepthOnly" }
+            
+            ColorMask 0
+            
+            HLSLPROGRAM
+            #pragma vertex DepthOnlyVertex
+            #pragma fragment DepthOnlyFragment
+            
+            #include "Assets/Shaders/Includes/DepthOnly.hlsl"
+            ENDHLSL
+        }
     }
 }
