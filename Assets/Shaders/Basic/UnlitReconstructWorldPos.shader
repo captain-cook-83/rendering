@@ -11,6 +11,8 @@ Shader "Cc83/Unlit/UnlitReconstructWorldPos"
         
         Pass
         {
+            Tags{ "LightMode"="UniversalForward" }
+            
             HLSLPROGRAM
             #pragma vertex vert
             #pragma fragment frag
